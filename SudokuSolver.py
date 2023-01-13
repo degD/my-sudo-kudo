@@ -103,6 +103,7 @@ if __name__ == '__main__':
     def sudoku_test(puzzle, solution=False):
         """Test the sudoku algorithm. Print the time it take to solve.
         Also check with solution if given. And print a message by the results."""
+        time.sleep(1);
         
         start = time.perf_counter()
         result = SudokuSolver(puzzle)
@@ -138,7 +139,7 @@ if __name__ == '__main__':
     sudoku_test(puzzle1, solution=solution1)
     
     # Test case 2: A hard sudoku
-    problem = [[9, 0, 0, 0, 8, 0, 0, 0, 1],
+    problem = [[0, 0, 0, 0, 8, 0, 0, 0, 1],
                [0, 0, 0, 4, 0, 6, 0, 0, 0],
                [0, 0, 5, 0, 7, 0, 3, 0, 0],
                [0, 6, 0, 0, 0, 0, 0, 4, 0],
@@ -149,3 +150,16 @@ if __name__ == '__main__':
                [1, 0, 0, 0, 4, 0, 0, 0, 7]]
     
     sudoku_test(problem)
+    
+    problem2 = [
+        [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 3, 0, 8, 5],
+        [0, 0, 1, 0, 2, 0, 0, 0, 0],
+        [0, 0, 0, 5, 0, 7, 0, 0, 0],
+        [0, 0, 4, 0, 0, 0, 1, 0, 0],
+        [0, 9, 0, 0, 0, 0, 0, 0, 0],
+        [5, 0, 0, 0, 0, 0, 0, 7, 3],
+        [0, 0, 2, 0, 1, 0, 0, 0, 0],
+        [0, 0, 0, 0, 4, 0, 0, 0, 9]]
+    
+    sudoku_test(problem2)
